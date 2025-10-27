@@ -2,39 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   GLOBAL STYLES & DESIGN SYSTEM
+   ============================================ */
+
 :root {
   --foreground-rgb: 30, 41, 59;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 248, 250, 252;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 241, 245, 249;
-    --background-start-rgb: 15, 23, 42;
-    --background-end-rgb: 30, 41, 59;
-  }
+body {
+  @apply bg-background text-text-primary antialiased;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* ============================================
+   TYPOGRAPHY ENHANCEMENTS
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold text-secondary-900;
 }
+
+h1 { @apply text-heading-1; }
+h2 { @apply text-heading-2; }
+h3 { @apply text-heading-3; }
+h4 { @apply text-heading-4; }
+
+p {
+  @apply text-body-md text-text-secondary;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .section-padding {
+    @apply py-section px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding-sm {
+    @apply py-section-sm px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
 }
 
-/* Smooth scroll behavior */
+/* ============================================
+   SMOOTH SCROLL & SCROLLBAR
+   ============================================ */
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* Custom scrollbar */
@@ -43,15 +78,36 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  @apply bg-secondary-50;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 5px;
+  @apply bg-secondary-300 rounded-lg;
+  transition: background 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  @apply bg-secondary-400;
 }
 
+/* ============================================
+   FOCUS STYLES (ACCESSIBILITY)
+   ============================================ */
+
+*:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
