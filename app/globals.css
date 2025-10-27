@@ -20,14 +20,27 @@ body {
    TYPOGRAPHY ENHANCEMENTS
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
-  @apply font-display font-bold text-secondary-900;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sans font-bold text-secondary-900;
 }
 
-h1 { @apply text-heading-1; }
-h2 { @apply text-heading-2; }
-h3 { @apply text-heading-3; }
-h4 { @apply text-heading-4; }
+h1 {
+  @apply text-heading-1;
+}
+h2 {
+  @apply text-heading-2;
+}
+h3 {
+  @apply text-heading-3;
+}
+h4 {
+  @apply text-heading-4;
+}
 
 p {
   @apply text-body-md text-text-secondary;
@@ -41,25 +54,32 @@ p {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .section-padding {
     @apply py-section px-4 sm:px-6 lg:px-8;
   }
-  
+
   .section-padding-sm {
     @apply py-section-sm px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
-  
+
   .gradient-text {
     @apply bg-gradient-primary bg-clip-text text-transparent;
   }
-  
+
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+    @apply transition-all duration-300 hover:-translate-y-1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+
+  .card-hover:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -106,7 +126,7 @@ html {
   body {
     @apply bg-white text-black;
   }
-  
+
   .no-print {
     display: none !important;
   }

@@ -1,6 +1,7 @@
 # Design System Documentation
 
 ## Vision
+
 A vibrant yet professional design system that appeals to both **Employers** and **Research Professors**, showcasing Rumman's multi-faceted expertise in Business Analysis, Education, and Research.
 
 ---
@@ -8,6 +9,7 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 ## 🎨 Color Palette
 
 ### Primary Colors (Blue - Professional & Trustworthy)
+
 - **Primary 500** (`#3B82F6`) - Main brand color
 - **Primary 600** (`#2563EB`) - Hover states
 - **Primary 700** (`#1D4ED8`) - Darker gradients
@@ -15,18 +17,21 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 **Usage:** CTAs, links, primary actions, brand elements
 
 ### Accent Colors (Emerald - Success & Data)
+
 - **Accent 500** (`#10B981`) - Main accent
 - **Accent 600** (`#059669`) - Darker variants
 
 **Usage:** Success states, data visualization, achievements
 
 ### Vibrant Accents
+
 - **Purple** (`#A855F7`, `#9333EA`) - Technology & innovation
 - **Orange** (`#F97316`, `#EA580C`) - Warmth & energy
 
 **Usage:** Technical skills, special highlights, CTAs
 
 ### Neutral Palette (Secondary)
+
 - **Secondary 900** (`#0F172A`) - Headings, emphasis
 - **Secondary 800** (`#1E293B`) - Primary text
 - **Secondary 600** (`#475569`) - Secondary text
@@ -37,16 +42,19 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 ## 📐 Typography Scale
 
 ### Display Sizes
+
 - `display-1`: 4.5rem (72px) - Hero headings
 - `display-2`: 3.75rem (60px) - Large titles
 
 ### Headings
+
 - `heading-1`: 3rem (48px) - Page titles
 - `heading-2`: 2.25rem (36px) - Section titles
 - `heading-3`: 1.875rem (30px) - Subsection titles
 - `heading-4`: 1.5rem (24px) - Card titles
 
 ### Body Text
+
 - `body-xl`: 1.25rem (20px) - Large paragraphs
 - `body-lg`: 1.125rem (18px) - Slightly emphasized
 - `body-md`: 1rem (16px) - Default body
@@ -67,6 +75,7 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 ## 🌈 Gradients
 
 ### Brand Gradients
+
 - `gradient-primary`: Blue (#3B82F6 → #1D4ED8)
 - `gradient-accent`: Emerald (#10B981 → #059669)
 - `gradient-vibrant`: Blue → Purple → Orange (Special CTAs)
@@ -74,6 +83,7 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 - `gradient-warm`: Orange gradient (Enthusiasm, energy)
 
 ### Background Effects
+
 - `mesh-gradient`: Subtle radial gradients for depth
 
 ---
@@ -90,12 +100,14 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 ## 🎬 Animations
 
 ### Entry Animations
+
 - `fade-in`: Simple opacity fade
 - `fade-in-up`: Fade with upward motion (primary)
 - `slide-in-right`: Slide from right
 - `bounce-slow`: Gentle continuous bounce
 
 ### Hover States
+
 - All interactive elements: `transition-all duration-300`
 - Cards: Slight lift (`translate-y-1`) + shadow increase
 - Buttons: Shadow enhancement
@@ -105,7 +117,9 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 ## 🧩 Component Patterns
 
 ### Buttons
+
 **Variants:**
+
 - `primary`: Solid blue with gradient option
 - `secondary`: Dark navy
 - `outline`: Bordered primary
@@ -114,12 +128,14 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 **States:** Default, hover, focus, disabled
 
 ### Cards
+
 - Rounded corners (xl)
 - Subtle border
 - Hover: Lift + shadow increase
 - Optional gradient background
 
 ### Skill Badges
+
 - Color-coded by category:
   - **Default** (Blue): General skills
   - **Tech** (Purple): Technical skills
@@ -168,11 +184,13 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 ## 📊 Usage Guidelines
 
 ### For Employers:
+
 - **Emphasize:** Professional achievements, technical skills
 - **Show:** Analytics capabilities, automation expertise
 - **Tone:** Results-focused, innovative
 
 ### For Research Professors:
+
 - **Emphasize:** Academic credentials, research projects
 - **Show:** Teaching experience, methodological expertise
 - **Tone:** Scholarly, collaborative
@@ -197,4 +215,3 @@ A vibrant yet professional design system that appeals to both **Employers** and 
 - Framer Motion for advanced animations
 - Semantic HTML for accessibility
 - Mobile-first responsive design
-
