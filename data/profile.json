@@ -1,0 +1,99 @@
+{
+  "profile": {
+    "name": "Rumman Ahmed",
+    "title": "Business Analyst · Educator · Researcher",
+    "email": "ahmedrumman546@gmail.com",
+    "phone": "+8801758127395",
+    "location": "Sylhet, Bangladesh",
+    "summary": "Dynamic Business Graduate with experience teaching IGCSE & IAL Business and Economics, and working as a Business Analyst with Staff Asia. Skilled in data analytics, automation, and research. Passionate about integrating business insight with technology and education.",
+    "languages": ["English", "Bengali"],
+    "linkedin": "",
+    "github": "",
+    "download_cv": "/rumman-cv.pdf"
+  },
+  "education": [
+    {
+      "degree": "Master of Business Administration (MBA)",
+      "institution": "Shahjalal University of Science and Technology (SUST)",
+      "cgpa": "3.22 / 4.00",
+      "year": "2017–2018",
+      "highlights": ["Major: Management", "Courses: Strategic Management, Research Methods"]
+    },
+    {
+      "degree": "Bachelor of Business Administration (BBA)",
+      "institution": "Shahjalal University of Science and Technology (SUST)",
+      "cgpa": "3.53 / 4.00",
+      "year": "2012–2016",
+      "highlights": ["Major: Management", "Relevant Courses: Econometrics, Business Research, Organizational Behavior"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Business Analyst",
+      "organization": "Staff Asia",
+      "period": "September 2024 – Present",
+      "responsibilities": [
+        "Analyzing business data and HR metrics to guide operational decision-making.",
+        "Designing workflow automations and AI-based process improvements.",
+        "Collaborating with cross-functional teams to optimize reporting and business intelligence."
+      ]
+    },
+    {
+      "title": "Economics & Business Teacher (IGCSE & IAL)",
+      "organization": "Bangladesh International Tutorial (BIT), Sylhet",
+      "period": "February 2020 – June 2024",
+      "responsibilities": [
+        "Taught IGCSE and A-Level Economics & Business under Edexcel curriculum.",
+        "Conducted classes on R and Python for data analysis and applied business problems.",
+        "Guided student-led business initiatives (e.g., on-campus organic business).",
+        "Supervised research projects under British Council programs."
+      ]
+    },
+    {
+      "title": "Assistant Lecturer (Intern)",
+      "organization": "Shahjalal University of Science and Technology",
+      "period": "2019",
+      "responsibilities": ["Assisted in teaching undergraduate management courses.", "Supported faculty research and data analysis."]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Financial Statement Analysis — Square Company Ltd.",
+      "period": "June – December 2016",
+      "tools": ["SPSS", "Excel"],
+      "description": "Performed ratio and statistical analysis of Square's financial performance, assessing profitability, liquidity, and solvency. Produced actionable insights for management strategy."
+    },
+    {
+      "title": "Supply Chain and Logistics Study — Sylhet",
+      "period": "2017",
+      "tools": ["Survey Design", "SPSS"],
+      "description": "Conducted a survey-based analysis on supply chain practices and logistics challenges among local businesses in Sylhet region."
+    },
+    {
+      "title": "Mobile Banking and Digital Payment Behavior in Bangladesh",
+      "period": "2018",
+      "tools": ["SPSS", "Survey Research"],
+      "description": "Explored adoption factors and user satisfaction for mobile banking services in Bangladesh."
+    },
+    {
+      "title": "Big Data Analysis — Academic Project",
+      "period": "2021–2022",
+      "tools": ["R", "Python"],
+      "description": "Analyzed large-scale business datasets using R and Python to extract meaningful trends in customer and sales data."
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "R", "SPSS", "Excel", "Automation tools", "Data Visualization"],
+    "business": ["Financial Analysis", "Research & Reporting", "Strategic Planning", "Project Management"],
+    "soft": ["Teaching & Mentoring", "Leadership", "Communication", "Analytical Thinking"]
+  },
+  "certifications": [
+    {
+      "name": "British Council Research Supervision Program",
+      "year": "2023",
+      "description": "Supervised student-led business and sustainability research projects."
+    }
+  ],
+  "interests": ["Data Analytics", "Business Research", "Education Technology", "Automation"]
+}
+
