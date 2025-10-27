@@ -1,8 +1,10 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Download, Mail, Phone, MapPin } from 'lucide-react';
-import Button from '../ui/Button';
+import { motion } from "framer-motion";
+import { Download, Mail, Phone, MapPin, User } from "lucide-react";
+import Image from "next/image";
+import Button from "../ui/Button";
+import { useCountUp } from "../../hooks/useCountUp";
 
 interface HeroProps {
   profile: {
@@ -13,12 +15,21 @@ interface HeroProps {
     location: string;
     summary: string;
     download_cv: string;
+    profile_photo?: string;
   };
 }
 
 export default function Hero({ profile }: HeroProps) {
+  const yearsExperience = useCountUp({ end: 5, delay: 500 });
+  const projectsCount = useCountUp({ end: 20, delay: 700 });
+  const rolesCount = useCountUp({ end: 3, delay: 900 });
+  const studentsTaught = useCountUp({ end: 100, delay: 1100 });
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding bg-mesh-gradient">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center section-padding bg-mesh-gradient"
+    >
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -28,13 +39,41 @@ export default function Hero({ profile }: HeroProps) {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex justify-center md:justify-start mb-6"
+            >
+              <div className="relative">
+                {profile.profile_photo ? (
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-primary p-1">
+                    <Image
+                      src={profile.profile_photo}
+                      alt={profile.name}
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-32 h-32 rounded-full bg-gradient-primary flex items-center justify-center shadow-xl">
+                    <User className="w-16 h-16 text-white" />
+                  </div>
+                )}
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">✓</span>
+                </div>
+              </div>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h1 className="text-display-2 font-bold text-secondary-900 mb-4">
-                I&apos;m{' '}
+                I&apos;m{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   {profile.name}
                 </span>
@@ -90,14 +129,20 @@ export default function Hero({ profile }: HeroProps) {
               <Button
                 size="lg"
                 gradient
-                onClick={() => window.open(profile.download_cv, '_blank')}
+                onClick={() => window.open(profile.download_cv, "_blank")}
               >
                 <Download className="w-5 h-5 mr-2 inline" />
                 Download CV
               </Button>
-              <Button variant="outline" size="lg" onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 Get In Touch
               </Button>
             </motion.div>
@@ -117,19 +162,25 @@ export default function Hero({ profile }: HeroProps) {
                     <h3 className="text-heading-3 mb-4">Quick Stats</h3>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <div className="text-3xl font-bold">5+</div>
+                        <div className="text-3xl font-bold">
+                          {yearsExperience}+
+                        </div>
                         <div className="text-sm">Years Experience</div>
                       </div>
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <div className="text-3xl font-bold">20+</div>
+                        <div className="text-3xl font-bold">
+                          {projectsCount}+
+                        </div>
                         <div className="text-sm">Projects</div>
                       </div>
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <div className="text-3xl font-bold">3</div>
+                        <div className="text-3xl font-bold">{rolesCount}</div>
                         <div className="text-sm">Roles</div>
                       </div>
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <div className="text-3xl font-bold">100+</div>
+                        <div className="text-3xl font-bold">
+                          {studentsTaught}+
+                        </div>
                         <div className="text-sm">Students Taught</div>
                       </div>
                     </div>
@@ -139,7 +190,7 @@ export default function Hero({ profile }: HeroProps) {
                   </p>
                 </div>
               </div>
-              
+
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-400 rounded-full opacity-60 blur-2xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-500 rounded-full opacity-40 blur-3xl"></div>
@@ -150,4 +201,3 @@ export default function Hero({ profile }: HeroProps) {
     </section>
   );
 }
-

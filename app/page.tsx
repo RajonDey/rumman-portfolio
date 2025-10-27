@@ -1,5 +1,6 @@
 import profileData from "../data/profile.json";
 import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Experience from "../components/sections/Experience";
@@ -21,6 +22,7 @@ export default function Home() {
       <Projects projects={projects} />
       <Skills skills={skills} />
       <Contact profile={profile} />
+      <Footer profile={profile} />
     </main>
   );
 }
